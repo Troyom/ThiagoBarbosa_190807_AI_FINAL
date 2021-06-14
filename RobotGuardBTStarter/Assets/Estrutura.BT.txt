@@ -1,0 +1,6 @@
+tree("Root")
+	whileCondicional
+		sequence
+		Método A
+		Método B
+		Método C

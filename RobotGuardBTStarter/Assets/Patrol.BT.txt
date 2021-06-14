@@ -1,0 +1,10 @@
+tree("Root")
+	Succeed
+		PickDestination(-100,-100)
+		MoveToDestination
+		PickDestination(-100, 100)
+		MoveToDestination
+		PickDestination( 100, 100)
+		MoveToDestination
+		PickDestination( 100,-100)
+		MoveToDestination

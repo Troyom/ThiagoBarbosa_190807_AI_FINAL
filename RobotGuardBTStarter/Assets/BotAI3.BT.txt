@@ -1,0 +1,27 @@
+tree("Root")
+	parallel
+		repeat mute tree("Patrol")
+		repeat mute tree("Dead")
+
+tree("Dead")
+	sequence
+		IsHealthLessThan(0.1)
+		Explode
+
+tree("Patrol")
+	fallback
+		tree("Run")
+		while IsHealthLessThan(40.0)
+			fallback
+				tree("Wander")
+
+tree("Run")
+	while SeePlayer
+		sequence
+			Fugir
+			Wait(0.1)
+
+tree("Wander")
+	sequence
+		PickRandomDestination
+		MoveToDestination
